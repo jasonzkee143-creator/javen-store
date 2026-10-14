@@ -1,15 +1,25 @@
+import { useState, useEffect } from 'react'
 import ProductCard from '../components/ProductCard'
 
-const products = [
-  { id: 1, title: "Product 1", price: 19.99, image: "https://picsum.photos/300/200?random=1" },
-  { id: 2, title: "Product 2", price: 24.99, image: "https://picsum.photos/300/200?random=2" },
-  { id: 3, title: "Product 3", price: 14.5, image: "https://picsum.photos/300/200?random=3" },
-  { id: 4, title: "Product 4", price: 39.0, image: "https://picsum.photos/300/200?random=4" },
-  { id: 5, title: "Product 5", price: 9.99, image: "https://picsum.photos/300/200?random=5" },
-  { id: 6, title: "Product 6", price: 49.99, image: "https://picsum.photos/300/200?random=6" },
-]
-
 function Home() {
+  const [products, setProducts] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products')
+      .then((res) => {
+        if (!res.ok) throw new Error('Failed to load products')
+        return res.json()
+      })
+      .then((data) => setProducts(data))
+      .catch((err) => setError(err.message))
+      .finally(() => setLoading(false))
+  }, [])
+
+  if (loading) return <p className="p-6">Loading...</p>
+  if (error) return <p className="p-6 text-red-600">{error}</p>
+
   return (
     <main className="p-6">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
