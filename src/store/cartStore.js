@@ -25,6 +25,14 @@ const useCartStore = create(
         set((state) => ({
           items: state.items.filter((item) => item.id !== id),
         })),
+        decreaseQuantity: (id) =>
+  set((state) => ({
+    items: state.items
+      .map((item) =>
+        item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+      )
+      .filter((item) => item.quantity > 0),
+  })),
     }),
     { name: 'cart-storage' }
   )
