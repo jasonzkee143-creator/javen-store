@@ -1,16 +1,44 @@
-# React + Vite
+# Javen Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Javen Store is a responsive storefront built with React and Vite. Browse and search the product collection, filter by category, view product details, and save items to a wishlist or shopping cart.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsive storefront with a searchable, filterable product catalog
+- Product detail pages with related products
+- Persistent cart and wishlist
+- Cart checkout with the `WELCOME10` promo code
+- Automated production build checks with GitHub Actions
 
-## React Compiler
+The catalog combines products from the Fake Store API with 20 additional Javen Store products. Product images are loaded from their configured image URLs.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run locally
 
-## Expanding the ESLint configuration
+Requirements: Node.js 22.12 or newer and npm.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```sh
+npm ci
+npm run dev
+```
+
+Vite prints the local development URL in the terminal.
+
+## Build and preview
+
+```sh
+npm run build
+npm run preview
+```
+
+The production site is generated in `dist/`.
+
+## Deploy with Vercel
+
+The GitHub Actions workflow checks that the app builds; it does not host or deploy the site. To publish it and deploy future pushes automatically:
+
+1. Sign in to [Vercel](https://vercel.com/) with GitHub and choose **Add New → Project**.
+2. Import `jasonzkee143-creator/javen-store`.
+3. Keep the detected Vite settings: build command `npm run build` and output directory `dist`.
+4. Select **Deploy**. Vercel will create a public URL and deploy subsequent pushes to `main` automatically.
+
+No environment variables are required for the current app.
