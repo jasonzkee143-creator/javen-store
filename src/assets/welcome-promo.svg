@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="440" viewBox="0 0 560 440" fill="none">
+  <defs>
+    <linearGradient id="tag" x1="188" y1="138" x2="371" y2="347" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF2D9"/>
+      <stop offset="1" stop-color="#DFC08A"/>
+    </linearGradient>
+  </defs>
+  <circle cx="286" cy="218" r="181" fill="#FFF0D4" fill-opacity=".1"/>
+  <circle cx="286" cy="218" r="150" stroke="#FFF6E8" stroke-opacity=".2"/>
+  <circle cx="286" cy="218" r="118" stroke="#FFF6E8" stroke-opacity=".14"/>
+  <path d="M84 365h392" stroke="#F8E8CA" stroke-linecap="round" stroke-width="8"/>
+  <path d="m236 153 121-26 55 179-121 37-55-190Z" fill="#315F4D" stroke="#D8C69F" stroke-width="5"/>
+  <path d="m202 178 129-48 67 180-129 48-67-180Z" fill="url(#tag)" stroke="#FFF8E9" stroke-width="4"/>
+  <circle cx="237" cy="200" r="9" fill="#315F4D"/>
+  <path d="M237 200c-9-36 8-64 41-73" stroke="#F3DFC0" stroke-linecap="round" stroke-width="5"/>
+  <text x="273" y="244" fill="#244C3D" font-family="Georgia,serif" font-size="54" font-weight="700" text-anchor="middle">10%</text>
+  <text x="273" y="275" fill="#55715A" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" text-anchor="middle">A LITTLE THANK YOU</text>
+  <path d="M394 174c19-18 43-16 57 4m-57-4c-4-24 8-41 31-48m-31 48c24-5 42 4 52 26" stroke="#B8C394" stroke-linecap="round" stroke-width="5"/>
+  <path d="M448 163c-13-5-19-16-16-29 13 3 19 14 16 29Zm-9-24c1-13 10-21 23-22 1 13-7 21-23 22Zm5 44c-11 5-23 2-31-8 10-7 22-4 31 8Z" fill="#94A17A"/>
+  <path d="m153 292 6 13 14 1-11 9 4 14-13-8-12 8 4-14-12-9 15-1 5-13Zm292 63 4 8 9 1-7 5 2 9-8-5-7 5 2-9-8-5 9-1 4-8Z" fill="#E9D3A4"/>
+  <circle cx="169" cy="206" r="14" fill="#D5A96C"/>
+  <circle cx="169" cy="206" r="6" fill="#F2DDB7"/>
+</svg>

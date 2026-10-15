@@ -5,6 +5,7 @@ const useCartStore = create(
   persist(
     (set) => ({
       items: [],
+      promoCode: null,
 
       addToCart: (product) =>
         set((state) => {
@@ -35,7 +36,15 @@ const useCartStore = create(
             .filter((item) => item.quantity > 0),
         })),
 
-      clearCart: () => set({ items: [] }),
+      applyPromoCode: (code) => {
+        if (code.trim().toUpperCase() !== 'WELCOME10') return false
+        set({ promoCode: 'WELCOME10' })
+        return true
+      },
+
+      removePromoCode: () => set({ promoCode: null }),
+
+      clearCart: () => set({ items: [], promoCode: null }),
     }),
     { name: 'cart-storage' }
   )
